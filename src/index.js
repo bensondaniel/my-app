@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+var app = require('../app');
+var wiki = require('./server.js');
+// ...
+app.use('/wiki', wiki);
 
 function Square(props) {
   return (

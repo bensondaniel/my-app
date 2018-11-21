@@ -1,7 +1,16 @@
-const express = require('express')
-const app = express()
-const port = 3000
+// server.js - server route module.
 
-app.get('/', (req, res) => res.send('Hello World!'))
+var express = require('express');
+var router = express.Router();
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// Home page route.
+router.get('/', function (req, res) {
+  res.send('this is home page');
+})
+
+// About page route.
+router.get('/about', function (req, res) {
+  res.send('About this page');
+})
+
+module.exports = router;

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-var app = require('../app');
+var express = require('express');
+var app = express;
 var wiki = require('./server.js');
 // ...
 app.use('/wiki', wiki);
